@@ -340,10 +340,43 @@
         Not ready to book a call? Send a message and we'll get back to you.
       </p>
 
-  <form action="https://formspree.io/f/xwvjzwva" method="POST">
-  <input type="email" name="email" placeholder="test email" required>
-  <textarea name="message" placeholder="test message"></textarea>
-  <button type="submit">Send</button>
+ <form
+  class="contact-form"
+  action="https://formspree.io/f/xwvjzwva"
+  method="POST"
+>
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="New NeuroForge Website Inquiry"
+  />
+
+  <input
+    type="text"
+    name="name"
+    placeholder="Full Name"
+    required
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+  />
+
+  <textarea
+    name="message"
+    rows="6"
+    placeholder="How can we help?"
+    required
+  ></textarea>
+
+  <button type="submit">
+    Send Message
+  </button>
+
 </form>
 >
 
