@@ -1,132 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeuroForge | Virtual Joint Resilience & Pain Consulting</title>
-    <!-- Tailwind CSS for high-end modern styling -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- FontAwesome for clean iconography -->
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        @import url('https://googleapis.com');
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>NeuroForge</title>
+
+  <link rel="stylesheet" href="styles.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
 
-    <!-- Premium Minimal Navigation -->
-    <nav class="border-b border-slate-900 bg-slate-950/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid font-black text-2xl text-emerald-400 fa-bolt-lightning"></i>
-                <span class="text-xl font-extrabold tracking-tight uppercase text-white">NEURO<span class="text-emerald-400">FORGE</span></span>
-            </div>
-            <!-- Update the href to your Calendly/Acuity link -->
-            <a href="https://calendly.com" target="_blank" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-5 py-2.5 rounded-lg text-sm transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg shadow-emerald-500/10">
-                Book Consult <i class="fa-solid fa-arrow-right ml-1"></i>
-            </a>
-        </div>
-    </nav>
+<body>
 
-    <!-- Psychological Hero Section -->
-    <section class="relative py-24 md:py-32 overflow-hidden border-b border-slate-900">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.08),transparent_45%)]"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Virtual Second-Opinion Practice
-            </span>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-                Your MRI Is Not A <br class="hidden md:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Life Sentence.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
-                Traditional medicine treats your body like broken hardware. We fix your nervous system's <span class="text-white font-medium">software</span>. Welcome to clinical pain consulting built for the high-performance athlete.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://calendly.com" target="_blank" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-4 rounded-xl text-base transition-all duration-200 shadow-xl shadow-emerald-500/20 text-center">
-                    Apply for 15-Min Strategy Call
-                </a>
-                <a href="#paradigm" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 font-medium px-8 py-4 rounded-xl text-base transition-all duration-200 text-center">
-                    Read the Literature
-                </a>
-            </div>
-        </div>
-    </section>
+  <!-- NAVBAR -->
+  <nav class="navbar">
 
-    <!-- The Disconnect: Direct Contrast -->
-    <section class="py-20 max-w-6xl mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">Why Traditional Rehab Fails</h2>
-            <p class="text-slate-400 mt-2">The system is broken, not your joints.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
-                <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-file-invoice-dollar text-rose-400 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-3">The Insurance Trap</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Generic clinics pack calendars and cut corners. You end up doing basic leg lifts while a therapist manages three other patients simultaneously.
-                </p>
-            </div>
-            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
-                <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-bell-slash text-rose-400 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-3">The Alarm Over-Reaction</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Chronic pain is an over-reactive spinal cord gate. Massaging or injecting the local joint ignores the hyper-sensitized neural baseline.
-                </p>
-            </div>
-            <div class="bg-slate-900/40 border border-slate-900 p-8 rounded-2xl">
-                <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-6">
-                    <i class="fa-solid fa-ban text-rose-400 text-lg"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-3">The Fear Cycle</h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Being told to "stop moving" commands your brain to tag that pattern as dangerous. This hyper-vigilance drops your threshold for sharp pain.
-                </p>
-            </div>
-        </div>
-    </section>
+    <div class="logo">
+      NeuroForge
+    </div>
 
-    <!-- The 12-Week NeuroForge Paradigm -->
-    <section id="paradigm" class="py-20 border-t border-slate-900 bg-slate-950">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-white">The 12-Week Joint Resilience Blueprint</h2>
-                <p class="text-slate-400 mt-2 max-w-xl mx-auto">A clinical, three-phase framework delivered entirely virtually to bypass joint stress and build high-performance capacity.</p>
-            </div>
-            <div class="space-y-12">
-                <!-- Phase 1 -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12 bg-slate-900/20 border border-slate-900 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="text-emerald-400 text-xl font-mono font-bold tracking-wider uppercase md:w-32 shrink-0">Phase 01</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Narrative De-Threatening & Reset</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                            We audit your imaging and history over high-definition screen-share to contextualize diagnostic vocabulary. By reframing "bone-on-bone" or "torn labrums" as age-expected features rather than structural death sentences, we fundamentally lower your central nervous system's threat perception.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded border border-slate-800 font-medium">Hurt vs. Harm</span>
-                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded border border-slate-800 font-medium">Somatic Tracking</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Phase 2 -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12 bg-slate-900/20 border border-slate-900 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="text-emerald-400 text-xl font-mono font-bold tracking-wider uppercase md:w-32 shrink-0">Phase 02</div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Hypoxic Muscle Building & Off-Loading</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                            We deploy literature-backed, low-load Blood Flow Restriction (BFR) conditioning. By safely reducing arterial flow during targeted, high-repetition protocols (20-30% 1RM), we trigger rapid Type II muscle fiber fatigue and profound growth hormone releases. You build muscle support with practically zero mechanical joint load.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded border border-slate-800 font-medium">BFR 30-15-15-15 Scheme</span>
-                            <span class="bg-slate-900 text-slate-300 text-xs px-2.5 py-1 rounded border border-slate-800 font-medium">Metabolic Stress</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Phase 3 -->
-                <div class="flex flex-col md:flex-row gap-6 md:gap-12 bg-slate-900/20 border border-slate-900 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="text-emerald-400 text-xl font-mono font-bold tracking-wider uppercase md:w-32 shrink-0">Phase 03</div>
-                    <div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#results">Who It's For</a></li>
+      <li><a href="#contact">Apply</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="hero-subtitle">
+        VIRTUAL SECOND-OPINION REHAB & PERFORMANCE COACHING
+      </p>
+
+      <h1>
+        Retrain Movement.<br>
+        Reclaim Performance.
+      </h1>
+
+      <p class="hero-text">
+        NeuroForge helps active adults rebuild strength,
+        movement confidence, and performance after failed
+        traditional rehab.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact" class="primary-btn">
+          Apply For Coaching
+        </a>
+
+        <a href="#method" class="secondary-btn">
+          Learn More
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CREDIBILITY -->
+  <section class="credibility">
+
+    <div class="container">
+
+      <div class="credibility-grid">
+
+        <div class="credibility-card">
+          <h3>Evidence-Based</h3>
+
+          <p>
+            Built using modern pain science,
+            progressive strength principles,
+            and individualized movement coaching.
+          </p>
+        </div>
+
+        <div class="credibility-card">
+          <h3>100% Virtual</h3>
+
+          <p>
+            Elite rehab and performance guidance
+            without rushed clinic visits or insurance limitations.
+          </p>
+        </div>
+
+        <div class="credibility-card">
+          <h3>Return To Performance</h3>
+
+          <p>
+            The goal isn't simply pain reduction —
+            it's helping you move confidently again.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="container narrow">
+
+      <h2>
+        Your Body Is More Adaptable Than You Think
+      </h2>
+
+      <p>
+        Many active adults are told their joints are "wearing out,"
+        that movement is dangerous,
+        or that surgery is their only option.
+      </p>
+
+      <p>
+        But pain is more complex than a scan or MRI.
+        Strength, confidence, conditioning,
+        nervous system sensitivity,
+        recovery capacity,
+        and movement behavior all matter.
+      </p>
+
+      <p>
+        NeuroForge combines evidence-based rehab,
+        modern strength principles,
+        and nervous-system-informed coaching
+        to help you return to training,
+        lifting,
+        running,
+        hiking,
+        and living confidently again.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- METHOD -->
+  <section class="method" id="method">
+
+    <div class="container">
+
+      <h2>
+        The NeuroForge Method
+      </h2>
+
+      <div class="method-grid">
+
+        <div class="method-card">
+
+          <span>01</span>
+
+          <h3>
+            Movement Assessment
+          </h3>
+
+          <p>
+            Identify aggravating patterns,
+            fear-based movement behaviors,
+            and current performance limitations.
+          </p>
+
+        </div>
+
+        <div class="method-card">
+
+          <span>02</span>
+
+          <h3>
+            Strength Rebuilding
+          </h3>
+
+          <p>
+            Develop resilient strength using
+            progressive low-irritation programming
+            tailored to your body and goals.
+          </p>
+
+        </div>
+
+        <div class="method-card">
+
+          <span>03</span>
+
+          <h3>
+            Confidence Restoration
+          </h3>
+
+          <p>
+            Gradually return to meaningful movement
+            without fear,
+            avoidance,
+            or overprotection.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="results" id="results">
+
+    <div class="container">
+
+      <h2>
+        Who NeuroForge Is For
+      </h2>
+
+      <div class="results-grid">
+
+        <div class="result-item">
+          Active adults frustrated with chronic joint pain
+        </div>
+
+        <div class="result-item">
+          People who failed traditional rehab
+        </div>
+
+        <div class="result-item">
+          Lifters trying to squat confidently again
+        </div>
+
+        <div class="result-item">
+          Runners attempting to avoid surgery
+        </div>
+
+        <div class="result-item">
+          Former athletes rebuilding performance
+        </div>
+
+        <div class="result-item">
+          Professionals seeking high-level virtual guidance
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY TRADITIONAL REHAB FAILS -->
+  <section class="traditional">
+
+    <div class="container narrow">
+
+      <h2>
+        Why Traditional Rehab Often Falls Short
+      </h2>
+
+      <p>
+        Many active adults complete weeks of traditional rehab
+        without fully regaining confidence or performance.
+      </p>
+
+      <p>
+        Generic exercise sheets,
+        rushed appointments,
+        passive treatments,
+        and fear-driven messaging often leave people feeling stuck.
+      </p>
+
+      <p>
+        NeuroForge focuses on individualized coaching,
+        progressive strength exposure,
+        education,
+        and long-term self-sufficiency.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Build Strength. Restore Confidence.
+      </h2>
+
+      <p>
+        Return to the activities you thought you lost.
+      </p>
+
+      <a href="#contact" class="primary-btn">
+        Apply For Coaching
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <h2>
+        Apply For A Free Strategy Call
+      </h2>
+
+      <p class="contact-subtext">
+        Tell us about your pain history,
+        goals,
+        and previous rehab experiences.
+      </p>
+
+      <form class="contact-form">
+
+        <input type="text" placeholder="Full Name" required />
+
+        <input type="email" placeholder="Email Address" required />
+
+        <textarea
+          rows="6"
+          placeholder="Tell us about your situation..."
+        ></textarea>
+
+        <button type="submit">
+          Submit Application
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <h3>
+        NeuroForge
+      </h3>
+
+      <p>
+        Virtual second-opinion rehab and performance coaching
+        for active adults with persistent joint pain.
+      </p>
+
+      <small>
+        © 2026 NeuroForge. All rights reserved.
+      </small>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
