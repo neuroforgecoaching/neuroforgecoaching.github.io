@@ -322,26 +322,42 @@
         and previous rehab experiences.
       </p>
 
-      <form
+   <form
   class="contact-form"
   action="https://formspree.io/f/xwvjzwva"
   method="POST"
 >
 
-        <input type="text" placeholder="Full Name" required />
+  <input
+    type="text"
+    name="name"
+    placeholder="Full Name"
+    required
+  />
 
-        <input type="email" placeholder="Email Address" required />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    required
+  />
 
-        <textarea
-          rows="6"
-          placeholder="Tell us about your situation..."
-        ></textarea>
+  <textarea
+    name="message"
+    rows="6"
+    placeholder="Tell us about your situation..."
+    required
+  ></textarea>
 
-        <button type="submit">
-          Submit Application
-        </button>
-
-      </form>
+  <button type="submit">
+    Submit Application
+  </button>
+<input
+  type="hidden"
+  name="_next"
+  value="https://YOURUSERNAME.github.io/thankyou.html"
+/>
+</form>
 
     </div>
 
