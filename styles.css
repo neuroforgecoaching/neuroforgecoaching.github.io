@@ -140,7 +140,7 @@ p{
     rgba(11,17,32,0.82)
   ),
 
-  url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop')
+  url('https://unsplash.com')
   center/cover no-repeat;
 
   display:flex;
@@ -530,6 +530,7 @@ footer p{
   }
 
 }
+
 /* FAQ Accordion Styling */
 .faq-section {
     padding: 80px 20px;
@@ -594,3 +595,125 @@ footer p{
     transform: rotate(45deg); /* Flips + into an x */
     color: #111827;
 }
+
+/* ==========================================================================
+   NEUROFORGE PREMIUM QUIZ ENGINE SKIN EXTENSION
+   ========================================================================== */
+
+/* Quiz Full Layout Viewport Wrapper */
+.quiz-section {
+    padding: 140px 0 110px 0;
+    background: #0b1120; /* Deep Obsidian to match your theme */
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.06) 0%, transparent 40%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Master Form Sheet Block */
+.quiz-container {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--bg-secondary); /* Dark Card Slate */
+    padding: 50px 45px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    box-shadow: 0 25px 70px rgba(2, 6, 23, 0.45);
+}
+
+/* Dynamic Core Branding Typography Headers */
+.quiz-container h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quiz-container .subtitle {
+    text-align: center;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Segmented Evaluation Cards */
+.quiz-container .question-card {
+    border-bottom: 1px solid var(--border);
+    padding: 32px 0;
+    transition: all 0.3s ease;
+}
+
+.quiz-container .question-card:first-of-type {
+    padding-top: 0;
+}
+
+.quiz-container .question-card:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Micro Typography Context Blocks */
+.quiz-container .question-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.quiz-container .context-text {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+/* Interactive Modern Radio Selection Elements */
+.quiz-container .options {
+    display: flex;
+    gap: 16px;
+}
+
+.quiz-container .option-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 110px;
+    justify-content: center;
+}
+
+.quiz-container .option-label:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Customized Webkit Form Radio Overrides */
+.quiz-container input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #475569;
+    border-radius: 50%;
+    outline: none;
+    margin: 0;
+    position: relative;
+    display: flex;
