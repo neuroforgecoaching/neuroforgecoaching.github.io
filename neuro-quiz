@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The NeuroSomatic Freedom Scale Quiz</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-card: #ffffff;
+            --bg-page: #f3f4f6;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .quiz-container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 24px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .question-card {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+        }
+
+        .question-card:last-of-type {
+            border-bottom: none;
+        }
+
+        .question-text {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .context-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            font-style: italic;
+        }
+
+        .options {
+            display: flex;
+            gap: 15px;
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary-hover);
+        }
+
+        #result-box {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary);
+            background: #eff6ff;
+        }
+
+        .result-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .error-message {
+            display: none;
+            color: #dc2626;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>The NeuroSomatic Freedom Scale</h1>
+    <p class="subtitle">Answer these 10 questions to find out if your symptoms are driven by structural injury or a protective nervous system loop.</p>
+    
+    <form id="quiz-form">
+        <!-- Q1 -->
+        <div class="question-card">
+            <div class="question-text">1. The Chameleon Effect (Symptom Shifting)</div>
+            <div class="context-text">Do your symptoms ever change location, alter in intensity, or swap sensations (e.g., switching from a dull ache to a burning tingle)?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q1" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q1" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="question-card">
+            <div class="question-text">2. The Structural Paradox (Imaging vs. Reality)</div>
+            <div class="context-text">Have your symptoms completely failed to improve—or actually worsened—even after targeted physical treatments, surgeries, or physical therapy aimed at fixing your imaging results (X-rays, MRIs)?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q2" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q2" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="question-card">
+            <div class="question-text">3. The Stress Synchronization</div>
+            <div class="context-text">Do your symptoms noticeably flare up, intensify, or reappear during—or immediately following—periods of high stress, emotional confrontation, heavy workloads, or life transitions?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q3" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q3" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="question-card">
+            <div class="question-text">4. The Weekend / Vacation Reprieve</div>
+            <div class="context-text">Have you ever noticed your symptoms decrease or completely disappear when you are distracted, away on vacation, or fully engaged in an activity you deeply love and feel safe doing?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q4" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q4" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="question-card">
+            <div class="question-text">5. The Structural Law-Breaker</div>
+            <div class="context-text">Do your symptoms break predictable physical laws? (e.g., sitting hurts on a soft couch but feels fine in a hard car seat; or bending forward hurts to pick up a pen, but doesn't hurt when tying your shoes?)</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q5" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q5" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="question-card">
+            <div class="question-text">6. The Anticipation Flare</div>
+            <div class="context-text">Do you ever experience a surge in pain or symptoms simply by thinking about an upcoming activity, planning a trip, or dreading a specific physical task before you even begin moving?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q6" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q6" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="question-card">
+            <div class="question-text">7. The Symmetrical Twin</div>
+            <div class="context-text">Do your symptoms ever mirror themselves on opposite sides of your body, or affect an entire broad region that doesn't align with a single specific nerve pathway?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q7" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q7" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="question-card">
+            <div class="question-text">8. The Personality Match</div>
+            <div class="context-text">Do you identify as a perfectionist, a people-pleaser, a high-achiever, or someone who harbors a lot of unspoken pressure, resentment, or anxiety?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q8" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q8" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="question-card">
+            <div class="question-text">9. The Weather & Environment Variable</div>
+            <div class="context-text">Do your symptoms flare up based on external environmental triggers that shouldn't logically damage tissue, such as cold weather, air conditioning, specific foods, or entering a stressful building?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q9" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q9" value="0"> No</label>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="question-card">
+            <div class="question-text">10. The Safe Assessment</div>
+            <div class="context-text">Deep down, despite terrifying flares, have doctors run extensive tests and ruled out malignant, life-threatening, or actively progressive disease processes?</div>
+            <div class="options">
+                <label class="option-label"><input type="radio" name="q10" value="1" required> Yes</label>
+                <label class="option-label"><input type="radio" name="q10" value="0"> No</label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Calculate My Score</button>
