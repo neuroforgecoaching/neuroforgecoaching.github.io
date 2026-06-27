@@ -285,23 +285,17 @@ footer {
    PRICING (ISOLATED - SAFE)
 ========================= */
 
+
 .pricing {
   background: #f8fafc;
 }
 
-.pricing h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-/* grid ONLY affects pricing */
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
+
 
 /* card NEVER touches global card system */
 .pricing-card {
