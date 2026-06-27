@@ -1,243 +1,24 @@
-/* =========================
-   RESET
-========================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =========================
-   ROOT VARIABLES
-========================= */
-
-:root {
-  --bg: #0b1120;
-  --bg-secondary: #111827;
-
-  --text: #f8fafc;
-  --text-dark: #111827;
-
-  --primary: #7c3aed;
-  --primary-light: #8b5cf6;
-  --secondary: #06b6d4;
-
-  --border: rgba(255,255,255,0.08);
-
-  --gradient: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
-}
-
-/* =========================
-   BASE STYLES
-========================= */
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f8fafc;
-  color: var(--text-dark);
-  line-height: 1.7;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-section {
-  padding: 110px 0;
-}
-
-h1, h2, h3 {
-  line-height: 1.1;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 22px 6%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background: rgba(11,17,32,0.75);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-  z-index: 1000;
-}
-
-.logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 35px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(11,17,32,0.82), rgba(11,17,32,0.82)),
-    center/cover no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 5rem;
-  font-weight: 800;
-}
-
-.hero-text {
-  font-size: 1.3rem;
-  max-width: 760px;
-  margin: auto;
-  opacity: 0.9;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.primary-btn,
-.secondary-btn {
-  padding: 17px 34px;
-  border-radius: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.primary-btn {
-  background: var(--gradient);
-  color: white;
-}
-
-.secondary-btn {
-  border: 1px solid rgba(255,255,255,0.25);
-  color: white;
-  background: rgba(255,255,255,0.05);
-}
-
-/* =========================
-   CARDS (GLOBAL SYSTEM)
-========================= */
-
-.credibility-card,
-.method-card,
-.result-item {
-  background: white;
-  padding: 38px;
-  border-radius: 22px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   GRID SYSTEMS
-========================= */
-
-.credibility-grid,
-.method-grid,
-.results-grid,
-.pricing-grid {
-  display: grid;
-  gap: 30px;
-}
-
-.credibility-grid,
-.method-grid {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-.results-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-/* =========================
-   SECTION BACKGROUNDS
-========================= */
-
-.about,
-.traditional {
-  background: #f1f5f9;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta {
-  background: linear-gradient(135deg, #111827, #0f172a);
-  color: white;
-  text-align: center;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-  background: white;
-}
-
-/* =========================
-   FAQ
-========================= */
-
-.faq-section {
-  background: white;
-}
-
-/* =========================
-   PRICING (FINAL CLEAN SYSTEM)
-========================= */
-
 .pricing {
   background: #f8fafc;
 }
 
+.pricing h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 70px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* 👇 KEY FIX: reuse your global card feel exactly */
 .pricing-card {
   background: white;
-  padding: 38px;
+  padding: 40px;
   border-radius: 22px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.06);
   transition: 0.35s ease;
@@ -248,6 +29,7 @@ h2 {
   box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
 
+/* featured matches your gradient system exactly */
 .pricing-card.featured {
   border: 2px solid transparent;
   background:
@@ -255,44 +37,41 @@ h2 {
     var(--gradient) border-box;
 }
 
+/* 👇 FIX TYPOGRAPHY STACK (this is what you're missing) */
 .pricing-card h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .price {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 800;
+  margin: 14px 0 6px;
 }
 
 .tagline {
   color: #6b7280;
+  margin-bottom: 22px;
 }
 
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.pricing-card li {
-  padding: 10px 0;
+/* list spacing closer to your method cards */
+.pricing-card ul li {
+  padding: 11px 0;
   border-bottom: 1px solid #f1f5f9;
+  color: #374151;
 }
 
+/* full-width button consistency */
+.pricing-card a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* responsive */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3.3rem;
-  }
-
-  h2 {
-    font-size: 2.3rem;
-  }
-
   .pricing-grid {
     grid-template-columns: 1fr;
-  }
-
-  section {
-    padding: 90px 0;
   }
 }
