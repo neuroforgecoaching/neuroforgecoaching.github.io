@@ -1,64 +1,104 @@
-<!-- PRICING -->
-<section class="pricing">
-  <div class="container">
 
-    <div class="pricing-grid">
+/* =========================
+   PRICING (MATCHES SITE SYSTEM)
+========================= */
 
-      <!-- ASSESSMENT -->
-      <div class="pricing-card featured">
-        <h2>Initial Coaching Assessment</h2>
-        <p class="price">$297</p>
+.pricing {
+  background: #f1f5f9; /* matches your about/traditional sections */
+}
 
-        <p class="tagline">Start here — required first step</p>
+/* reuse your existing grid behavior */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
 
-        <ul>
-          <li>75–90 minute 1:1 deep dive session</li>
-          <li>Review symptoms, training, and history</li>
-          <li>Pain science & nervous system education</li>
-          <li>Identify key drivers of flare-ups or plateau</li>
-          <li>Personalized 2–4 week action plan</li>
-          <li>Clear recommendation for next step</li>
-        </ul>
+/* KEY FIX: make pricing use SAME CARD STYLE as site */
+.pricing-card {
+  background: white;
+  padding: 38px;
+  border-radius: 22px;
 
-        <a href="index.html#contact" class="primary-btn">Book Assessment</a>
-      </div>
+  /* EXACT match to credibility-card shadow */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
 
-      <!-- MOMENTUM -->
-      <div class="pricing-card">
-        <h2>Recovery Momentum</h2>
-        <p class="price">$297 / month</p>
+  transition: 0.35s ease;
+}
 
-        <p class="tagline">Weekly coaching + structured progress</p>
+/* hover matches method-card behavior */
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
 
-        <ul>
-          <li>Weekly 30–45 minute coaching sessions</li>
-          <li>Personalized plan updates and progression</li>
-          <li>Flare-up strategy + troubleshooting</li>
-          <li>Ongoing education & confidence building</li>
-          <li>Messaging support between sessions</li>
-        </ul>
+/* featured matches your gradient brand system */
+.pricing-card.featured {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    var(--gradient) border-box;
+}
 
-        <a href="index.html#contact" class="primary-btn">Apply for Coaching</a>
-      </div>
+/* TYPOGRAPHY aligned with rest of site */
+.pricing-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 
-      <!-- MAINTENANCE -->
-      <div class="pricing-card">
-        <h2>Maintenance Support</h2>
-        <p class="price">$149 / month</p>
+.price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 10px 0;
+}
 
-        <p class="tagline">Light-touch support & accountability</p>
+.tagline {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
 
-        <ul>
-          <li>1 coaching session per month</li>
-          <li>Plan review and adjustments</li>
-          <li>Limited messaging support</li>
-          <li>Ongoing guidance when needed</li>
-        </ul>
+/* LIST matches method-card spacing style */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-        <a href="index.html#contact" class="secondary-btn">Join Maintenance</a>
-      </div>
+.pricing-card li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+}
 
-    </div>
+/* BUTTONS match your hero buttons exactly */
+.primary-btn {
+  background: var(--gradient);
+  color: white;
+  border-radius: 14px;
+  padding: 17px 34px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  </div>
-</section>
+.primary-btn:hover {
+  transform: translateY(-4px);
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  border-radius: 14px;
+  padding: 17px 34px;
+}
+
+/* RESPONSIVE matches your method grid */
+@media(max-width:768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
