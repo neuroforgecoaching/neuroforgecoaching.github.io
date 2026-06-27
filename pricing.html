@@ -61,3 +61,97 @@
 
   </div>
 </section>
+/* =========================
+   PRICING (MATCHES YOUR BRAND SYSTEM)
+========================= */
+
+.pricing {
+  background: #f8fafc;
+  padding: 110px 0;
+}
+
+.pricing h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD — matches your credibility/method cards exactly */
+.pricing-card {
+  background: white;
+  padding: 38px;
+  border-radius: 22px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  transition: 0.35s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+}
+
+/* FEATURED CARD — uses your gradient system */
+.pricing-card.featured {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(white, white) padding-box,
+    var(--gradient) border-box;
+}
+
+/* TYPOGRAPHY */
+.pricing-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 12px 0;
+}
+
+.tagline {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+/* LIST */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.pricing-card li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  color: #374151;
+}
+
+/* BUTTON ALIGNMENT WITH YOUR SYSTEM */
+.pricing-card a {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing h2 {
+    font-size: 2.3rem;
+  }
+}
