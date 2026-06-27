@@ -281,23 +281,30 @@ footer {
   }
 }
 
-/* =========================
-   PRICING (ISOLATED - SAFE)
-========================= */
 
+/* =========================
+   PRICING (RE-STYLED SAFE VERSION)
+========================= */
 
 .pricing {
   background: #f8fafc;
 }
 
+.pricing h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* GRID */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-
-/* card NEVER touches global card system */
+/* CARD */
 .pricing-card {
   background: white;
   padding: 38px;
@@ -311,7 +318,7 @@ footer {
   box-shadow: 0 20px 60px rgba(0,0,0,0.1);
 }
 
-/* featured uses ONLY local override */
+/* FEATURED CARD */
 .pricing-card.featured {
   border: 2px solid transparent;
   background:
@@ -319,7 +326,7 @@ footer {
     var(--gradient) border-box;
 }
 
-/* typography scoped ONLY to pricing */
+/* TEXT */
 .pricing-card h3 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -331,6 +338,7 @@ footer {
   font-size: 2.4rem;
   font-weight: 800;
   margin: 12px 0;
+  color: #111827;
 }
 
 .pricing-card .tagline {
@@ -338,7 +346,7 @@ footer {
   margin-bottom: 20px;
 }
 
-/* list styling ONLY inside pricing */
+/* LIST */
 .pricing-card ul {
   list-style: none;
   padding: 0;
@@ -351,16 +359,9 @@ footer {
   color: #374151;
 }
 
-/* button only inside pricing cards */
+/* BUTTON */
 .pricing-card a {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-
-/* responsive ONLY pricing */
-@media (max-width: 768px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
 }
