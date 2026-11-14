@@ -1,75 +1,435 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Pricing | NeuroForge</title>
+  <title>Coaching Options | NeuroForge</title>
 
+  <meta name="description" content="Explore NeuroForge chronic pain education and coaching options. Build understanding, confidence, and practical self-management habits." />
+  <meta name="author" content="Paul Giordano" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles-v2.css">
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #142039;
+      --purple: #7c3aed;
+      --cyan: #06b6d4;
+      --text: #f4f7fb;
+      --muted: #aab7ca;
+      --border: rgba(255,255,255,0.10);
+      --gradient: linear-gradient(110deg, #7c3aed, #06b6d4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 6%;
+      border-bottom: 1px solid var(--border);
+      background: rgba(11,17,32,0.95);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .back-link {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      color: var(--cyan);
+    }
+
+    .pricing {
+      padding: 85px 5%;
+      min-height: 80vh;
+      background:
+        radial-gradient(ellipse at 15% 10%, rgba(124,58,237,0.16), transparent 45%),
+        radial-gradient(ellipse at 85% 80%, rgba(6,182,212,0.10), transparent 45%);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--purple);
+      background: linear-gradient(145deg, #1b2340, #142039);
+    }
+
+    .pricing-card h2 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      color: var(--cyan);
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin: 12px 0 4px;
+    }
+
+    .price-period {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 15px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .pricing-card li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 12px 0;
+    }
+
+    .pricing-card li::before {
+      content: "✓";
+      color: var(--cyan);
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 13px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: auto;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    .primary-btn {
+      background: var(--gradient);
+      color: white;
+    }
+
+    .secondary-btn {
+      border: 1px solid var(--border);
+      color: white;
+    }
+
+    .details {
+      max-width: 850px;
+      margin: 65px auto 0;
+      text-align: center;
+    }
+
+    .details h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .details p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 15px;
+    }
+
+    .disclaimer {
+      max-width: 950px;
+      margin: 45px auto 0;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .disclaimer h3 {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .disclaimer p {
+      color: #8997aa;
+      font-size: 0.8rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 25px 5%;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: #8190a5;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .pricing {
+        padding: 60px 5%;
+      }
+
+      .navbar {
+        padding: 17px 5%;
+      }
+
+      .pricing-card {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="pricing">
-  <div class="container">
+  <nav class="navbar">
+    <a href="index.html" class="logo">NeuroForge</a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </nav>
 
-    <h2>Coaching Options</h2>
+  <section class="pricing">
+    <div class="container">
 
-    <div class="pricing-grid">
+      <p class="eyebrow">Coaching Options</p>
 
-      <div class="pricing-card featured">
-        <h3>Initial Coaching Assessment</h3>
-        <p class="price">$297</p>
-        <p class="tagline">Start here — required first step</p>
+      <h1>Build Understanding. <span style="color:#06b6d4;">Move Forward.</span></h1>
 
-        <ul>
-          <li>75–90 minute 1:1 deep dive session</li>
-          <li>Review symptoms, training, and history</li>
-          <li>Pain science + nervous system education</li>
-          <li>Identify key drivers of flare-ups or plateau</li>
-          <li>Personalized 2–4 week action plan</li>
-        </ul>
+      <p class="intro">
+        Educational coaching designed to help you better understand
+        persistent pain, develop practical self-management habits,
+        and reconnect with the activities that matter to you.
+      </p>
 
-        <a href="index.html#contact" class="primary-btn">Book Assessment</a>
+      <div class="pricing-grid">
+
+        <!-- INITIAL CONSULTATION -->
+        <div class="pricing-card featured">
+
+          <h2>Initial Coaching Consultation</h2>
+
+          <p class="tagline">A place to begin</p>
+
+          <p class="price">$297</p>
+          <p class="price-period">One-time session · 75–90 minutes</p>
+
+          <p class="description">
+            An extended educational conversation to explore your goals,
+            introduce relevant pain science concepts, and determine
+            whether ongoing coaching is a good fit.
+          </p>
+
+          <ul>
+            <li>Discuss your goals and priorities</li>
+            <li>Explore general pain science concepts</li>
+            <li>Learn about attention and symptom-related patterns</li>
+            <li>Identify meaningful behavioral goals</li>
+            <li>Receive relevant educational resources</li>
+          </ul>
+
+          <a href="index.html#contact" class="btn primary-btn">
+            Book a Conversation
+          </a>
+
+        </div>
+
+        <!-- MONTHLY COACHING -->
+        <div class="pricing-card">
+
+          <h2>Recovery Momentum</h2>
+
+          <p class="tagline">Ongoing educational support</p>
+
+          <p class="price">$297</p>
+          <p class="price-period">Per month</p>
+
+          <p class="description">
+            Continued coaching focused on understanding, personal
+            development, behavioral goals, and accountability.
+          </p>
+
+          <ul>
+            <li>Two coaching sessions per month</li>
+            <li>Educational pain science resources</li>
+            <li>Personal behavioral goal setting</li>
+            <li>Progress and accountability discussions</li>
+            <li>Defined between-session support</li>
+          </ul>
+
+          <a href="index.html#contact" class="btn primary-btn">
+            Explore Monthly Coaching
+          </a>
+
+        </div>
+
+        <!-- MAINTENANCE -->
+        <div class="pricing-card">
+
+          <h2>Maintenance Support</h2>
+
+          <p class="tagline">Continued connection and accountability</p>
+
+          <p class="price">$149</p>
+          <p class="price-period">Per month</p>
+
+          <p class="description">
+            A lighter-touch option for people who want periodic
+            educational support and accountability.
+          </p>
+
+          <ul>
+            <li>One coaching session per month</li>
+            <li>Educational resource access</li>
+            <li>Review personal goals and progress</li>
+            <li>Discuss ongoing self-management habits</li>
+          </ul>
+
+          <a href="index.html#contact" class="btn secondary-btn">
+            Explore Maintenance Support
+          </a>
+
+        </div>
+
       </div>
 
-      <div class="pricing-card">
-        <h3>Recovery Momentum</h3>
-        <p class="price">$297 / month</p>
-        <p class="tagline">Weekly coaching + structured progression</p>
+      <!-- DETAILS -->
+      <div class="details">
 
-        <ul>
-          <li>Weekly 30–45 min coaching sessions</li>
-          <li>Personalized plan updates</li>
-          <li>Flare-up troubleshooting</li>
-          <li>Ongoing education & support</li>
-        </ul>
+        <h2>Not Sure Which Option Is Right?</h2>
 
-        <a href="index.html#contact" class="primary-btn">Apply</a>
+        <p>
+          Start with a free introductory conversation. We can discuss
+          what you're looking for, explain how coaching works, and
+          determine whether the service is appropriate for your goals.
+        </p>
+
+        <a href="index.html#contact" class="btn primary-btn"
+           style="display:inline-block; margin-top:10px;">
+          Schedule a Free Introductory Call
+        </a>
+
       </div>
 
-      <div class="pricing-card">
-        <h3>Maintenance Support</h3>
-        <p class="price">$149 / month</p>
-        <p class="tagline">Light-touch accountability</p>
+      <!-- SCOPE DISCLAIMER -->
+      <div class="disclaimer">
 
-        <ul>
-          <li>1 session per month</li>
-          <li>Plan adjustments</li>
-          <li>Limited support</li>
-        </ul>
+        <h3>Important Information About Coaching</h3>
 
-        <a href="index.html#contact" class="secondary-btn">Join</a>
+        <p>
+          NeuroForge provides educational and coaching services. Coaching
+          is not physical therapy, medical care, psychotherapy, diagnosis,
+          treatment, or a substitute for evaluation by a qualified healthcare
+          professional. Services do not include individualized medical
+          treatment or physical therapy. Coaching does not establish a
+          healthcare provider-patient relationship. Participants should seek
+          appropriate medical evaluation for new, changing, severe, or
+          concerning symptoms and continue working with their healthcare
+          professionals as appropriate. Coaching outcomes are not guaranteed.
+          The availability and scope of services may be limited by applicable
+          laws and regulations where a participant is located.
+        </p>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <footer>
+    <p>© 2026 NeuroForge. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
+
