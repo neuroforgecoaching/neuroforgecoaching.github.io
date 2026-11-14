@@ -1,61 +1,455 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeuroForge Blog | Pain, Movement & Second Opinions</title>
-  <meta name="description" content="Evidence-informed articles about chronic pain, movement, second opinions, and returning to the activities you love.">
-  <link rel="stylesheet" href="styles-v2.css">
+
+  <title>NeuroForge Blog | Understanding Persistent Pain</title>
+
+  <meta name="description" content="Explore educational articles about persistent pain, pain neuroscience, attention, the nervous system, and building confidence in everyday life.">
+
+  <meta name="author" content="Paul Giordano">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-light: #111b2e;
+      --card: #142039;
+      --purple: #7c3aed;
+      --cyan: #06b6d4;
+      --text: #f4f7fb;
+      --muted: #aab7ca;
+      --border: rgba(255,255,255,0.10);
+      --gradient: linear-gradient(110deg, #7c3aed, #06b6d4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 6%;
+      background: rgba(11,17,32,0.95);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 105px 20px;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.20), transparent 45%),
+        radial-gradient(ellipse at 80% 70%, rgba(6,182,212,0.13), transparent 45%);
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .blog-section {
+      padding: 80px 5%;
+      background: var(--bg-light);
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .blog-post {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      background: var(--card);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-3px);
+      border-color: var(--purple);
+    }
+
+    .blog-category {
+      color: var(--cyan);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      margin-bottom: 13px;
+    }
+
+    .blog-post h3 {
+      font-size: 1.15rem;
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .blog-post p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .read-more {
+      color: var(--cyan);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .blog-note {
+      margin-top: 45px;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .blog-note h3 {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .blog-note p {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .cta {
+      padding: 75px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      color: var(--muted);
+      margin: 0 auto 25px;
+    }
+
+    .primary-btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 8px;
+      color: white;
+      background: var(--gradient);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 25px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      color: #8190a5;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 650px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 75px 20px;
+      }
+
+      .blog-section {
+        padding: 60px 5%;
+      }
+
+      .blog-post {
+        padding: 23px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-  <div class="logo">NeuroForge</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-  </ul>
-</nav>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">NeuroForge</a>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Pain, Movement & Second Opinions</h1>
-    <p>Resources for active adults seeking clarity, confidence, and a path forward.</p>
-  </div>
-</section>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pricing.html">Coaching</a></li>
+      <li><a href="index.html#method">Our Approach</a></li>
+    </ul>
+  </nav>
 
-<section class="about">
-  <div class="container narrow">
+  <!-- HERO -->
+  <section class="hero">
 
-```
-<div class="blog-post">
-  <h2><a href="pain-without-damage.html">Why You Can Have Pain Even When Nothing Is Damaged</a></h2>
-  <p>Understanding why pain and tissue damage are not always the same thing.</p>
-</div>
+    <p class="eyebrow">The NeuroForge Journal</p>
 
-<div class="blog-post">
-  <h2><a href="what-to-do-after-pt-didnt-work.html">What To Do When Physical Therapy Didn't Solve Your Pain</a></h2>
-  <p>Why some people need a different approach after traditional treatment.</p>
-</div>
+    <h1>
+      Understanding Pain.
+      <span class="gradient-text">Changing Perspectives.</span>
+    </h1>
 
-<div class="blog-post">
-  <h2><a href="second-opinion-pain.html">5 Signs You May Need a Second Opinion About Your Pain</a></h2>
-  <p>Common situations where another perspective can provide clarity.</p>
-</div>
+    <p>
+      Explore educational insights about persistent pain, the nervous system,
+      attention, stress, and the science behind how we experience pain.
+    </p>
 
-<div class="blog-post">
-  <h2><a href="why-mri-doesnt-explain-symptoms.html">Why Your MRI Doesn't Always Explain Your Symptoms</a></h2>
-  <p>Understanding imaging findings and why they don't always predict pain.</p>
-</div>
+  </section>
 
-<div class="blog-post">
-  <h2><a href="how-brain-learns-pain.html">How The Brain Learns Pain — And How It Can Unlearn It</a></h2>
-  <p>A practical introduction to modern pain science.</p>
-</div>
-```
+  <!-- BLOG ARTICLES -->
+  <section class="blog-section">
 
-  </div>
-</section>
+    <div class="container">
+
+      <div class="section-heading">
+        <p class="eyebrow">Explore the Science</p>
+        <h2>Ideas That Challenge the Way We Think About Pain</h2>
+        <p>
+          Practical educational articles designed to make modern pain science
+          easier to understand and apply to everyday life.
+        </p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-post">
+          <p class="blog-category">Pain Science</p>
+
+          <h3>
+            <a href="pain-without-damage.html">
+              Why You Can Experience Pain Without Detectable Tissue Damage
+            </a>
+          </h3>
+
+          <p>
+            Explore why pain and tissue damage are not always directly
+            proportional, and how the nervous system contributes to
+            the experience of pain.
+          </p>
+
+          <a href="pain-without-damage.html" class="read-more">
+            Read Article →
+          </a>
+        </article>
+
+        <article class="blog-post">
+          <p class="blog-category">Understanding Persistent Pain</p>
+
+          <h3>
+            <a href="what-to-do-after-pt-didnt-work.html">
+              When Pain Persists After Physical Therapy: What Else Can You Explore?
+            </a>
+          </h3>
+
+          <p>
+            Learn about the broader factors that may influence persistent
+            pain and why understanding your experience can involve
+            more than one perspective.
+          </p>
+
+          <a href="what-to-do-after-pt-didnt-work.html" class="read-more">
+            Read Article →
+          </a>
+        </article>
+
+        <article class="blog-post">
+          <p class="blog-category">Perspective</p>
+
+          <h3>
+            <a href="second-opinion-pain.html">
+              5 Reasons to Consider Another Perspective About Persistent Pain
+            </a>
+          </h3>
+
+          <p>
+            Understand when additional medical evaluation or another
+            professional perspective may help answer unanswered questions.
+          </p>
+
+          <a href="second-opinion-pain.html" class="read-more">
+            Read Article →
+          </a>
+        </article>
+
+        <article class="blog-post">
+          <p class="blog-category">Imaging and Pain</p>
+
+          <h3>
+            <a href="why-mri-doesnt-explain-symptoms.html">
+              Why an MRI Doesn't Always Tell the Whole Story About Pain
+            </a>
+          </h3>
+
+          <p>
+            Explore the relationship between imaging findings, symptoms,
+            and the importance of interpreting medical information
+            in the appropriate clinical context.
+          </p>
+
+          <a href="why-mri-doesnt-explain-symptoms.html" class="read-more">
+            Read Article →
+          </a>
+        </article>
+
+        <article class="blog-post">
+          <p class="blog-category">Brain and Nervous System</p>
+
+          <h3>
+            <a href="how-brain-learns-pain.html">
+              How the Brain Learns About Pain: Understanding Sensitivity
+              and Adaptation
+            </a>
+          </h3>
+
+          <p>
+            An introduction to nervous system learning, threat processing,
+            and how experiences can shape responses to sensations over time.
+          </p>
+
+          <a href="how-brain-learns-pain.html" class="read-more">
+            Read Article →
+          </a>
+        </article>
+
+      </div>
+
+      <div class="blog-note">
+
+        <h3>A Note About These Resources</h3>
+
+        <p>
+          NeuroForge articles are intended for general education and
+          information. They are not individualized medical advice,
+          diagnosis, or treatment. Information should not replace
+          evaluation or guidance from a qualified healthcare professional.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <p class="eyebrow">Explore NeuroForge</p>
+
+    <h2>Understanding Is a Starting Point.</h2>
+
+    <p>
+      Learn more about the educational coaching approach and how it
+      focuses on pain science, personal goals, and building confidence
+      in everyday life.
+    </p>
+
+    <a href="index.html#method" class="primary-btn">
+      Discover the NeuroForge Method
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NeuroForge. All rights reserved.</p>
+    <p>Educational Coaching | Understand Pain. Rebuild Confidence. Reconnect With Life.</p>
+  </footer>
 
 </body>
 </html>
