@@ -1,0 +1,1078 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NeuroForge | Chronic Pain Recovery Coaching</title>
+
+  <meta name="description" content="NeuroForge offers educational coaching for people living with persistent pain. Understand pain, build confidence, and reconnect with the activities that matter." />
+  <meta name="keywords" content="chronic pain coaching, persistent pain education, pain neuroscience education, nervous system education, pain recovery coaching" />
+  <meta name="author" content="Paul Giordano" />
+
+  <meta property="og:title" content="NeuroForge | Chronic Pain Recovery Coaching" />
+  <meta property="og:description" content="Understand pain. Rebuild confidence. Reconnect with life." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-light: #111b2e;
+      --card: #142039;
+      --purple: #7c3aed;
+      --cyan: #06b6d4;
+      --text: #f4f7fb;
+      --muted: #aab7ca;
+      --border: rgba(255,255,255,0.10);
+      --gradient: linear-gradient(110deg, #7c3aed, #06b6d4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .narrow {
+      max-width: 790px;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 5%;
+      background: rgba(11,17,32,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    .nav-links .nav-cta {
+      color: white;
+      background: var(--purple);
+      padding: 10px 17px;
+      border-radius: 8px;
+    }
+
+    .hero {
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.20), transparent 45%),
+        radial-gradient(ellipse at 80% 70%, rgba(6,182,212,0.13), transparent 45%);
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--cyan);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.12;
+      letter-spacing: -2.5px;
+      margin-bottom: 25px;
+    }
+
+    .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-block;
+      padding: 14px 23px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 0.94rem;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .primary-btn {
+      color: white;
+      background: var(--gradient);
+    }
+
+    .secondary-btn {
+      color: white;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    section h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      max-width: 750px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 42px;
+    }
+
+    .about {
+      background: var(--bg-light);
+    }
+
+    .about p,
+    .founder p,
+    .method-intro,
+    .who-intro {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .pillars-grid,
+    .who-grid,
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .pillar-card,
+    .who-card,
+    .pricing-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 28px;
+    }
+
+    /* Hope without guarantees section */
+    .hope-section {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 15% 20%, rgba(124,58,237,0.24), transparent 48%),
+        radial-gradient(ellipse at 85% 80%, rgba(6,182,212,0.16), transparent 48%),
+        #101827;
+    }
+
+    .hope-panel {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(30px, 6vw, 64px);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: rgba(8,13,24,0.48);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+
+    .hope-panel h2 {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      font-size: clamp(2rem, 5vw, 3.35rem);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+    }
+
+    .hope-statement {
+      max-width: 720px;
+      margin: 0 auto 25px;
+      color: var(--cyan);
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .hope-panel p {
+      max-width: 700px;
+      margin: 0 auto 16px;
+      color: var(--muted);
+    }
+
+    .hope-panel .hope-brand {
+      margin: 30px 0 0;
+      color: var(--cyan);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .pillar-number {
+      display: inline-block;
+      color: var(--cyan);
+      font-weight: 800;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .pillar-card h3,
+    .who-card h3,
+    .pricing-card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 12px;
+    }
+
+    .pillar-card p,
+    .who-card p,
+    .pricing-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .founder {
+      background: var(--bg-light);
+    }
+
+    .founder-note {
+      border-left: 3px solid var(--purple);
+      padding-left: 22px;
+      margin-top: 25px;
+    }
+
+    .method {
+      background:
+        radial-gradient(ellipse at 90% 30%, rgba(124,58,237,0.12), transparent 45%);
+    }
+
+    .method-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .method-item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      padding: 22px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .method-icon {
+      color: var(--cyan);
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .method-item h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .method-item p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .who {
+      background: var(--bg-light);
+    }
+
+    .who-card {
+      min-height: 150px;
+    }
+
+    .who-card p {
+      margin-top: 8px;
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(124,58,237,0.8);
+      background: linear-gradient(145deg, #1b2340, #142039);
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin: 15px 0 5px;
+    }
+
+    .price-note {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      margin: 18px 0 25px;
+    }
+
+    .pricing-card li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 10px 0;
+    }
+
+    .pricing-card li::before {
+      content: "✓";
+      color: var(--cyan);
+      margin-right: 10px;
+      font-weight: 800;
+    }
+
+    .pricing-card .primary-btn {
+      margin-top: auto;
+    }
+
+    .pricing-disclaimer {
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .cta {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, rgba(124,58,237,0.20), transparent 65%);
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+    }
+
+    .contact {
+      background: var(--bg-light);
+      text-align: center;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .calendly-inline-widget {
+      min-width: 320px;
+      height: 700px;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--cyan);
+    }
+
+    .disclaimer {
+      padding: 35px 0;
+      background: #080d18;
+      border-top: 1px solid var(--border);
+    }
+
+    .disclaimer h3 {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .disclaimer p {
+      color: #8997aa;
+      font-size: 0.79rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 25px 0;
+      text-align: center;
+      color: #8190a5;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 850px) {
+      .navbar {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .pillars-grid,
+      .who-grid,
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 85px 18px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero-text {
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links {
+        gap: 12px 17px;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+
+      .pillars-grid,
+      .who-grid,
+      .pricing-grid,
+      .method-list {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-card,
+      .who-card,
+      .pricing-card {
+        padding: 23px;
+      }
+
+      .calendly-inline-widget {
+        height: 720px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="#" class="logo">NeuroForge</a>
+
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+<li><a href="index.html#method">Our Approach</a></li>
+<li><a href="index.html#results">Who It's For</a></li>
+<li><a href="quiz.html">Pain Patterns Quiz</a></li>
+<li><a href="pricing.html">Coaching</a></li>
+<li><a href="blog.html">Blog & Resources</a></li>
+<li><a href="index.html#contact">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+
+      <p class="eyebrow">Chronic Pain Recovery Coaching</p>
+
+      <h1>
+        Your pain experience doesn't have to
+        <span class="gradient-text">define your life.</span>
+      </h1>
+
+      <p class="hero-text">
+        Understand persistent pain. Explore the relationship between your
+        nervous system and symptoms. Rebuild confidence in the things that
+        matter to you.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="primary-btn">Explore Coaching</a>
+        <a href="#method" class="secondary-btn">Discover the NeuroForge Method</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="about" id="about">
+    <div class="container narrow">
+
+      <p class="eyebrow">A Different Perspective</p>
+
+      <h2>What if your relationship with pain could change?</h2>
+
+      <p>
+        Persistent pain can gradually become the center of everyday life.
+        You may find yourself thinking about symptoms, anticipating discomfort,
+        avoiding activities, or constantly searching for the next thing that
+        might make the pain go away.
+      </p>
+
+      <p>
+        When this happens, life can begin to feel smaller. Activities that once
+        felt natural may start to feel uncertain or intimidating.
+      </p>
+
+      <p>
+        NeuroForge offers educational coaching to help you better understand
+        persistent pain, explore how attention, expectations, stress, and
+        behavior relate to your experience, and develop a more confident
+        approach to everyday life.
+      </p>
+
+      <p class="highlight">
+        The goal isn't to organize your entire life around eliminating symptoms.
+        It's to help you move toward a life that matters to you.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder">
+    <div class="container narrow">
+
+      <p class="eyebrow">Meet the Founder</p>
+
+      <h2>A background in physical therapy. A focus on understanding pain.</h2>
+
+      <p>
+        NeuroForge was founded by Paul Giordano, PT, DPT, whose background
+        includes physical therapy and an interest in pain science, nervous
+        system education, and the ways people respond to persistent symptoms.
+      </p>
+
+      <p>
+        The NeuroForge coaching approach draws on concepts from pain science,
+        behavioral education, attention, and self-management to help people
+        develop a more informed and less fear-driven relationship with their
+        experiences.
+      </p>
+
+      <div class="founder-note">
+        <p>
+          NeuroForge is a separate educational coaching service. Coaching
+          services are not provided as physical therapy or as a substitute
+          for healthcare.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="method" id="method">
+    <div class="container">
+
+      <p class="eyebrow">The NeuroForge Method</p>
+
+      <h2>Understand. Explore. Reconnect.</h2>
+
+      <p class="section-intro">
+        Our approach focuses on education, awareness, and meaningful behavior
+        change. Rather than making symptom elimination the only measure of
+        progress, we explore how you can respond to difficult experiences
+        with greater understanding and confidence.
+      </p>
+
+      <div class="pillars-grid">
+
+        <div class="pillar-card">
+          <span class="pillar-number">01</span>
+          <h3>Understand Pain</h3>
+          <p>
+            Learn about modern pain science and how the brain and nervous
+            system contribute to the experience of pain.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">02</span>
+          <h3>Explore Attention</h3>
+          <p>
+            Examine how attention, expectations, and symptom monitoring
+            can influence the way you experience and respond to sensations.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">03</span>
+          <h3>Recognize Patterns</h3>
+          <p>
+            Explore the relationship between stress, daily habits,
+            avoidance, and the way you respond to difficult experiences.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">04</span>
+          <h3>Build Awareness</h3>
+          <p>
+            Learn general educational approaches to mindfulness, curiosity,
+            and observing sensations without automatically reacting to them.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">05</span>
+          <h3>Reconnect With Life</h3>
+          <p>
+            Identify meaningful activities and personal goals that help
+            you build a life less organized around symptom monitoring.
+          </p>
+        </div>
+
+        <div class="pillar-card">
+          <span class="pillar-number">06</span>
+          <h3>Develop Independence</h3>
+          <p>
+            Build knowledge, confidence, and self-management habits that
+            you can continue using beyond coaching.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="who" id="who">
+    <div class="container">
+
+      <p class="eyebrow">Who It's For</p>
+
+      <h2>For people ready to change how they approach persistent pain.</h2>
+
+      <p class="section-intro">
+        NeuroForge is designed for adults seeking education, perspective,
+        and supportive accountability while navigating persistent symptoms.
+      </p>
+
+      <div class="who-grid">
+
+        <div class="who-card">
+          <h3>Living With Persistent Pain</h3>
+          <p>
+            You have been dealing with ongoing symptoms and want to better
+            understand the science of pain.
+          </p>
+        </div>
+
+        <div class="who-card">
+          <h3>Constantly Monitoring Symptoms</h3>
+          <p>
+            You find yourself frequently checking, analyzing, or worrying
+            about bodily sensations.
+          </p>
+        </div>
+
+        <div class="who-card">
+          <h3>Feeling Stuck in Avoidance</h3>
+          <p>
+            Your experiences have made you hesitant to participate in
+            activities that are meaningful to you.
+          </p>
+        </div>
+
+        <div class="who-card">
+          <h3>Seeking a New Perspective</h3>
+          <p>
+            You want to explore pain science and develop a more informed
+            understanding of persistent symptoms.
+          </p>
+        </div>
+
+        <div class="who-card">
+          <h3>Ready for Behavioral Change</h3>
+          <p>
+            You want support building healthier habits, confidence,
+            and a more flexible response to difficult experiences.
+          </p>
+        </div>
+
+        <div class="who-card">
+          <h3>Focused on Quality of Life</h3>
+          <p>
+            You want to spend more time pursuing meaningful goals instead
+            of making every decision around symptoms.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOPE WITHOUT GUARANTEES -->
+  <section class="hope-section" aria-labelledby="hope-heading">
+    <div class="container">
+      <div class="hope-panel">
+        <p class="eyebrow">A Message of Possibility</p>
+        <h2 id="hope-heading">Your Past Doesn't Have to Define Your Future.</h2>
+        <p class="hope-statement">
+          Improvement is possible. Recovery isn't guaranteed.
+          Change is still worth pursuing.
+        </p>
+        <p>
+          Your symptoms today don't have to determine what your tomorrow looks like.
+          Your understanding of pain, your relationship with symptoms, and your
+          confidence in your body can continue to develop.
+        </p>
+        <p>
+          NeuroForge doesn't promise a cure or a particular outcome. We offer
+          education and support to help you understand persistent pain, explore
+          less fear-driven ways of responding, and reconnect with the activities
+          that matter to you.
+        </p>
+        <p class="hope-brand">NEUROFORGE</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHING PROCESS -->
+  <section class="method">
+    <div class="container">
+
+      <p class="eyebrow">How It Works</p>
+
+      <h2>A supportive, educational coaching process.</h2>
+
+      <div class="method-list">
+
+        <div class="method-item">
+          <span class="method-icon">01</span>
+          <div>
+            <h3>Start With a Conversation</h3>
+            <p>
+              Discuss your goals, what you hope to learn, and whether
+              educational coaching is an appropriate fit.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-item">
+          <span class="method-icon">02</span>
+          <div>
+            <h3>Build Understanding</h3>
+            <p>
+              Explore general pain science concepts and the relationship
+              between attention, expectations, stress, and behavior.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-item">
+          <span class="method-icon">03</span>
+          <div>
+            <h3>Develop Personal Goals</h3>
+            <p>
+              Identify meaningful, non-clinical behavioral goals and
+              practical ways to work toward them.
+            </p>
+          </div>
+        </div>
+
+        <div class="method-item">
+          <span class="method-icon">04</span>
+          <div>
+            <h3>Build Long-Term Independence</h3>
+            <p>
+              Strengthen your understanding and develop self-management
+              habits that support your goals beyond coaching.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHING AND PRICING -->
+  <section id="coaching">
+    <div class="container">
+
+      <p class="eyebrow">Coaching Options</p>
+
+      <h2>Start building a different relationship with pain.</h2>
+
+      <p class="section-intro">
+        Coaching is structured around education, personal goals,
+        accountability, and practical self-management.
+      </p>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <h3>Initial Coaching Consultation</h3>
+
+          <div class="price">$297</div>
+          <p class="price-note">One-time session · 75–90 minutes</p>
+
+          <p>
+            An extended educational coaching session to discuss your goals
+            and introduce the NeuroForge approach.
+          </p>
+
+          <ul>
+            <li>Discuss your goals and priorities</li>
+            <li>Explore relevant pain science concepts</li>
+            <li>Identify educational resources</li>
+            <li>Develop initial behavioral goals</li>
+          </ul>
+
+          <a href="#contact" class="primary-btn">Book a Conversation</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>Recovery Momentum</h3>
+
+          <div class="price">$297</div>
+          <p class="price-note">Monthly coaching</p>
+
+          <p>
+            Ongoing educational support to help you develop understanding,
+            confidence, and consistent self-management habits.
+          </p>
+
+          <ul>
+            <li>Two coaching sessions per month</li>
+            <li>Educational pain science resources</li>
+            <li>Personal behavioral goal setting</li>
+            <li>Progress and accountability discussions</li>
+            <li>Defined between-session support</li>
+          </ul>
+
+          <a href="#contact" class="primary-btn">Explore Monthly Coaching</a>
+        </div>
+
+      </div>
+
+      <p class="pricing-disclaimer">
+        Coaching availability, session details, and fit are discussed
+        before enrollment. Coaching does not include physical therapy,
+        diagnosis, or individualized medical treatment.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="about" id="resources">
+    <div class="container narrow">
+
+      <p class="eyebrow">Learn More</p>
+
+      <h2>Knowledge changes the conversation.</h2>
+
+      <p>
+        Understanding pain can be an important part of changing how you
+        respond to it. NeuroForge is committed to making pain science
+        concepts approachable, practical, and grounded in evidence.
+      </p>
+
+      <p>
+        Explore educational content about persistent pain, the nervous
+        system, attention, stress, and the relationship between symptoms
+        and everyday life.
+      </p>
+
+      <!-- Replace this placeholder with your actual blog or resource URL -->
+      <a href="mailto:paulgiordanodpt@gmail.com?subject=NeuroForge%20Resources"
+         class="secondary-btn">
+        Ask About Educational Resources
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="cta">
+    <div class="container">
+
+      <p class="eyebrow">Your Next Step</p>
+
+      <h2>You are more than your symptoms.</h2>
+
+      <p>
+        You don't have to figure everything out alone. Start with a
+        conversation about your goals and whether NeuroForge educational
+        coaching is right for you.
+      </p>
+
+      <a href="#contact" class="primary-btn">Schedule a Free Introductory Call</a>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <p class="eyebrow">Let's Connect</p>
+
+      <h2>Start With a Conversation.</h2>
+
+      <p>
+        Schedule a free introductory call to learn about the coaching
+        approach and ask questions before deciding whether to move forward.
+      </p>
+
+      <div class="calendly-inline-widget"
+        data-url="https://calendly.com/paulgiordanodpt/30min">
+      </div>
+
+      <a class="contact-email" href="mailto:paulgiordanodpt@gmail.com">
+        paulgiordanodpt@gmail.com
+      </a>
+
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer">
+    <div class="container">
+
+      <h3>Important Information About Coaching</h3>
+
+      <p>
+        NeuroForge provides educational and coaching services. Coaching is
+        not physical therapy, medical care, psychotherapy, diagnosis,
+        treatment, or a substitute for evaluation by a qualified healthcare
+        professional. No diagnosis or individualized medical treatment is
+        provided. Coaching does not establish a healthcare provider-patient
+        relationship. Participants should seek appropriate medical evaluation
+        for new, changing, severe, or concerning symptoms and continue working
+        with their healthcare professionals as appropriate. Participation in
+        coaching does not guarantee any particular outcome. The availability
+        and scope of services may be limited by applicable laws and regulations
+        where a participant is located.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 NeuroForge. All rights reserved.</p>
+      <p>Educational Coaching | Understand Pain. Rebuild Confidence. Reconnect With Life.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
